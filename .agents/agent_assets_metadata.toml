@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "CjmCIEpSM5GECriKZmU9y"
+uri = "file://artifacts/wedding-website/public/images/hero-bg.png"
+type = "image"
+title = "Elegant romantic hero floral"
+
+[[generated]]
+id = "Gx7vC6vexORmewKgbQWm4"
+uri = "file://artifacts/wedding-website/public/images/couple-1.png"
+type = "image"
+title = "Couple engagement photo"
+
+[[generated]]
+id = "gfgtt_SSd8_6UOrzv5Btx"
+uri = "file://artifacts/wedding-website/public/images/ring.png"
+type = "image"
+title = "Proposal ring photo"
+
+[[generated]]
+id = "hO9x_20OEUygaINm2D6Gt"
+uri = "file://artifacts/wedding-website/public/images/bridesmaid.png"
+type = "image"
+title = "Bridesmaid placeholder"
+
+[[generated]]
+id = "jgbfQJOVqNO8VOO7Zt3Zf"
+uri = "file://artifacts/wedding-website/public/images/groomsman.png"
+type = "image"
+title = "Groomsman placeholder"
