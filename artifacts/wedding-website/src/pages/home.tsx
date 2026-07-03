@@ -57,14 +57,24 @@ export default function Home() {
         <div className="absolute inset-0 z-0 bg-background">
           <img
             src="/images/hero-bg.png"
-            alt="Floral background"
-            className={`w-full h-full object-cover opacity-60 ${heroLoaded ? "" : "invisible"}`}
+            alt=""
+            aria-hidden="true"
+            className="invisible absolute inset-0 w-full h-full object-cover"
             onLoad={() => setHeroLoaded(true)}
             ref={(img) => {
               if (img?.complete) setHeroLoaded(true);
             }}
           />
-          <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px]" />
+          {heroLoaded && (
+            <div className="absolute inset-0 animate-in fade-in duration-1000">
+              <img
+                src="/images/hero-bg.png"
+                alt="Floral background"
+                className="w-full h-full object-cover opacity-60"
+              />
+              <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px]" />
+            </div>
+          )}
         </div>
 
         {heroLoaded && (
