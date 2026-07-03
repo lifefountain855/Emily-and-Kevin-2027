@@ -1,9 +1,40 @@
+import { useEffect, useState } from "react";
+import { getCookie } from "@/lib/cookies";
+
 export default function Details() {
+  const [sealingInvited, setSealingInvited] = useState(false);
+
+  useEffect(() => {
+    setSealingInvited(getCookie("sealing_invited") === "1");
+  }, []);
+
   return (
     <div className="animate-in fade-in duration-1000 pt-32 pb-24">
       <div className="container mx-auto px-4 max-w-4xl">
         <h1 className="font-serif text-5xl md:text-6xl text-primary text-center mb-16">Event Details</h1>
-        
+
+        {sealingInvited && (
+          <div className="mb-24">
+            <div className="bg-card p-8 border border-border shadow-sm max-w-xl mx-auto">
+              <h2 className="font-serif text-3xl text-accent mb-2">Sealing Ceremony</h2>
+              <p className="text-muted-foreground uppercase tracking-widest text-sm mb-6">Saturday, 11:00 AM &bull; Immediate Family Only</p>
+              <div className="mb-6 space-y-2 text-foreground/80">
+                <p className="font-medium">Salt Lake City Temple</p>
+                <p>50 W North Temple St</p>
+                <p>Salt Lake City, UT 84150</p>
+              </div>
+              <div className="aspect-video bg-muted relative overflow-hidden group">
+                <div className="absolute inset-0 bg-primary/10 flex items-center justify-center">
+                  <p className="text-primary font-medium tracking-wide uppercase">Map Placeholder</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground italic mt-6">
+                You're receiving these details because you were personally invited to this private ceremony. We're so grateful to share this sacred moment with you.
+              </p>
+            </div>
+          </div>
+        )}
+
         {/* Venues */}
         <div className="grid md:grid-cols-2 gap-12 mb-24">
           <div className="bg-card p-8 border border-border shadow-sm">
@@ -70,16 +101,20 @@ export default function Details() {
         <div className="grid md:grid-cols-2 gap-12">
           <div className="bg-secondary/10 p-8">
             <h2 className="font-serif text-3xl text-secondary-foreground mb-6">Dress Code</h2>
-            <p className="text-foreground/80 mb-4">
-              <strong>Formal / Cocktail Attire</strong>
-            </p>
-            <p className="text-foreground/80 mb-4">
-              We request formal or cocktail attire for our celebration. The venues are primarily indoors, but the Ring Ceremony has an outdoor garden component.
-            </p>
-            <ul className="list-disc list-inside text-foreground/80 space-y-2 ml-4">
-              <li>Layers are recommended as January in Utah is cold.</li>
-              <li>Block heels or flats are suggested for the garden paths.</li>
-            </ul>
+            <div className="space-y-6 text-foreground/80">
+              <div>
+                <h3 className="font-medium text-lg mb-1">Attire</h3>
+                <p>Formal / cocktail attire. The venues are primarily indoors, but the Ring Ceremony has an outdoor garden component.</p>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Footwear</h3>
+                <p>Block heels or flats are suggested for the garden paths.</p>
+              </div>
+              <div>
+                <h3 className="font-medium text-lg mb-1">Weather</h3>
+                <p>Layers are recommended as January in Utah is cold — a jacket or shawl will keep you comfortable outdoors.</p>
+              </div>
+            </div>
           </div>
           
           <div className="bg-primary/5 p-8">

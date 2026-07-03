@@ -48,8 +48,10 @@ function CountdownTimer() {
 }
 
 export default function Home() {
+  const [heroLoaded, setHeroLoaded] = useState(false);
+
   return (
-    <div className="animate-in fade-in duration-1000">
+    <div className={heroLoaded ? "animate-in fade-in duration-1000" : "opacity-0"}>
       {/* Hero Section */}
       <section className="relative h-[100dvh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -57,6 +59,10 @@ export default function Home() {
             src="/images/hero-bg.png"
             alt="Floral background"
             className="w-full h-full object-cover opacity-60"
+            onLoad={() => setHeroLoaded(true)}
+            ref={(img) => {
+              if (img?.complete) setHeroLoaded(true);
+            }}
           />
           <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px]" />
         </div>
