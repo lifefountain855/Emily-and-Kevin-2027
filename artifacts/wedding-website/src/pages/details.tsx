@@ -100,7 +100,7 @@ export default function Details() {
         {/* Travel & Dress Code */}
         <div className="grid md:grid-cols-2 gap-12">
           <div className="p-8 bg-[#7088a90d]">
-            <h2 className="font-serif text-3xl text-secondary-foreground mb-6">Dress Code</h2>
+            <h2 className="font-serif text-3xl mb-6 text-primary">Dress Code</h2>
             <p className="text-foreground/80 mb-4">
               <strong>Formal / Cocktail Attire</strong>
             </p>
