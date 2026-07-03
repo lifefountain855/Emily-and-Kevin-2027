@@ -6,14 +6,17 @@ export function Footer() {
         <p className="text-muted-foreground tracking-widest uppercase text-sm mb-8">
           January 25, 2027 • Salt Lake City, UT
         </p>
-        
+
         <div className="max-w-md mx-auto mb-8 text-foreground/80">
           <p className="mb-2">Questions? We'd love to help.</p>
-          <a href="mailto:hello@emilyandkevin2027.com" className="text-primary hover:underline">
-            hello@emilyandkevin2027.com
+          <a
+            href="mailto:kevinandemilysapp@gmail.com"
+            className="text-primary hover:underline"
+          >
+            kevinandemilysapp@gmail.com
           </a>
         </div>
-        
+
         <p className="text-xs text-muted-foreground">
           Built with love for our special day.
         </p>

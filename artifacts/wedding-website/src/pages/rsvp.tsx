@@ -29,8 +29,10 @@ export default function Rsvp() {
   return (
     <div className="animate-in fade-in duration-1000 pt-32 pb-24">
       <div className="container mx-auto px-4 max-w-3xl text-center">
-        <h1 className="font-serif text-5xl md:text-6xl text-primary mb-8">RSVP</h1>
-        
+        <h1 className="font-serif text-5xl md:text-6xl text-primary mb-8">
+          RSVP
+        </h1>
+
         <p className="text-lg text-foreground/80 mb-2">
           Please let us know if you'll be celebrating with us by
         </p>
@@ -60,12 +62,15 @@ export default function Rsvp() {
               <p className="text-muted-foreground uppercase tracking-widest text-sm mb-4">
                 Google Form Embedded Here
               </p>
-              <Button onClick={handleSubmit} className="bg-primary hover:bg-primary/90 text-primary-foreground tracking-wider uppercase">
+              <Button
+                onClick={handleSubmit}
+                className="bg-primary hover:bg-primary/90 text-primary-foreground tracking-wider uppercase"
+              >
                 Simulate Submit
               </Button>
             </div>
             <p className="text-sm text-muted-foreground mt-4">
-              Having trouble? Contact us at hello@emilyandkevin2027.com
+              Having trouble? Contact us at kevinandemilysapp@gmail.com
             </p>
           </div>
         )}
