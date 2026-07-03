@@ -48,6 +48,8 @@ function CountdownTimer() {
 }
 
 export default function Home() {
+  const [heroLoaded, setHeroLoaded] = useState(false);
+
   return (
     <div>
       {/* Hero Section */}
@@ -57,48 +59,56 @@ export default function Home() {
             src="/images/hero-bg.png"
             alt="Floral background"
             className="w-full h-full object-cover opacity-60"
+            onLoad={() => setHeroLoaded(true)}
+            ref={(img) => {
+              if (img?.complete) setHeroLoaded(true);
+            }}
           />
           <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px]" />
         </div>
-        
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20 animate-in fade-in duration-1000">
-          <h2 className="tracking-[0.2em] uppercase text-sm md:text-base mb-6 text-foreground/80">
-            Please join us for the wedding of
-          </h2>
-          <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-primary mb-6 leading-tight">
-            Emily <span className="text-accent">&</span> Kevin
-          </h1>
-          <p className="text-xl md:text-2xl font-serif text-foreground/90 mb-12 italic">
-            January 25, 2027 • Salt Lake City, Utah
-          </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">
-            <Link href="/rsvp" className="w-full sm:w-auto">
-              <Button size="lg" className="w-full sm:w-auto text-lg px-12 py-6 bg-primary hover:bg-primary/90 rounded-none tracking-widest uppercase">
-                RSVP Now
-              </Button>
-            </Link>
-            <Link href="/details" className="w-full sm:w-auto">
-              <Button variant="outline" size="lg" className="w-full sm:w-auto text-lg px-12 py-6 border-primary text-primary hover:bg-primary/5 rounded-none tracking-widest uppercase">
-                Event Details
-              </Button>
-            </Link>
+
+        {heroLoaded && (
+          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20 animate-in fade-in duration-1000">
+            <h2 className="tracking-[0.2em] uppercase text-sm md:text-base mb-6 text-foreground/80">
+              Please join us for the wedding of
+            </h2>
+            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-primary mb-6 leading-tight">
+              Emily <span className="text-accent">&</span> Kevin
+            </h1>
+            <p className="text-xl md:text-2xl font-serif text-foreground/90 mb-12 italic">
+              January 25, 2027 • Salt Lake City, Utah
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">
+              <Link href="/rsvp" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto text-lg px-12 py-6 bg-primary hover:bg-primary/90 rounded-none tracking-widest uppercase">
+                  RSVP Now
+                </Button>
+              </Link>
+              <Link href="/details" className="w-full sm:w-auto">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto text-lg px-12 py-6 border-primary text-primary hover:bg-primary/5 rounded-none tracking-widest uppercase">
+                  Event Details
+                </Button>
+              </Link>
+            </div>
           </div>
-        </div>
+        )}
       </section>
 
       {/* Welcome Section */}
-      <section className="py-24 md:py-32 bg-card">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="font-serif text-4xl md:text-5xl text-primary mb-8">Welcome</h2>
-          <p className="text-lg md:text-xl text-foreground/80 leading-relaxed font-light">
-            We are so excited to celebrate with you and can't wait to share our special day. 
-            This website contains all the details you'll need for our wedding weekend. 
-            Thank you for your ongoing love and support!
-          </p>
-          <CountdownTimer />
-        </div>
-      </section>
+      {heroLoaded && (
+        <section className="py-24 md:py-32 bg-card animate-in fade-in duration-1000">
+          <div className="container mx-auto px-4 max-w-4xl text-center">
+            <h2 className="font-serif text-4xl md:text-5xl text-primary mb-8">Welcome</h2>
+            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed font-light">
+              We are so excited to celebrate with you and can't wait to share our special day. 
+              This website contains all the details you'll need for our wedding weekend. 
+              Thank you for your ongoing love and support!
+            </p>
+            <CountdownTimer />
+          </div>
+        </section>
+      )}
     </div>
   );
 }
