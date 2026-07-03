@@ -54,11 +54,11 @@ export default function Home() {
     <div>
       {/* Hero Section */}
       <section className="relative h-[100dvh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 bg-background">
           <img
             src="/images/hero-bg.png"
             alt="Floral background"
-            className="w-full h-full object-cover opacity-60"
+            className={`w-full h-full object-cover opacity-60 ${heroLoaded ? "" : "invisible"}`}
             onLoad={() => setHeroLoaded(true)}
             ref={(img) => {
               if (img?.complete) setHeroLoaded(true);
