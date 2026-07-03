@@ -48,10 +48,8 @@ function CountdownTimer() {
 }
 
 export default function Home() {
-  const [heroLoaded, setHeroLoaded] = useState(false);
-
   return (
-    <div className={heroLoaded ? "animate-in fade-in duration-1000" : "opacity-0"}>
+    <div>
       {/* Hero Section */}
       <section className="relative h-[100dvh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -59,15 +57,11 @@ export default function Home() {
             src="/images/hero-bg.png"
             alt="Floral background"
             className="w-full h-full object-cover opacity-60"
-            onLoad={() => setHeroLoaded(true)}
-            ref={(img) => {
-              if (img?.complete) setHeroLoaded(true);
-            }}
           />
           <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px]" />
         </div>
         
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20 animate-in fade-in duration-1000">
           <h2 className="tracking-[0.2em] uppercase text-sm md:text-base mb-6 text-foreground/80">
             Please join us for the wedding of
           </h2>

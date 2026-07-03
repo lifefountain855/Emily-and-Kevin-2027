@@ -101,20 +101,16 @@ export default function Details() {
         <div className="grid md:grid-cols-2 gap-12">
           <div className="bg-secondary/10 p-8">
             <h2 className="font-serif text-3xl text-secondary-foreground mb-6">Dress Code</h2>
-            <div className="space-y-6 text-foreground/80">
-              <div>
-                <h3 className="font-medium text-lg mb-1">Attire</h3>
-                <p>Formal / cocktail attire. The venues are primarily indoors, but the Ring Ceremony has an outdoor garden component.</p>
-              </div>
-              <div>
-                <h3 className="font-medium text-lg mb-1">Footwear</h3>
-                <p>Block heels or flats are suggested for the garden paths.</p>
-              </div>
-              <div>
-                <h3 className="font-medium text-lg mb-1">Weather</h3>
-                <p>Layers are recommended as January in Utah is cold — a jacket or shawl will keep you comfortable outdoors.</p>
-              </div>
-            </div>
+            <p className="text-foreground/80 mb-4">
+              <strong>Formal / Cocktail Attire</strong>
+            </p>
+            <p className="text-foreground/80 mb-4">
+              We request formal or cocktail attire for our celebration. The venues are primarily indoors, but the Ring Ceremony has an outdoor garden component.
+            </p>
+            <ul className="list-disc list-inside text-foreground/80 space-y-2 ml-4">
+              <li>Layers are recommended as January in Utah is cold.</li>
+              <li>Block heels or flats are suggested for the garden paths.</li>
+            </ul>
           </div>
           
           <div className="bg-primary/5 p-8">
