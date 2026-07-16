@@ -4,7 +4,7 @@ export default function Faq() {
   const faqs = [
     {
       question: "Are children invited?",
-      answer: "We love your little ones! However, we have decided to keep our ceremony an adults-only event. Children are more than welcome to join us for the reception following the ceremony."
+      answer: "We love your little ones! However, we have decided to keep our sealing an adults-only event. Children are more than welcome to join us for the ring ceremony and reception."
     },
     {
       question: "What is the dress code?",
@@ -12,11 +12,11 @@ export default function Faq() {
     },
     {
       question: "Where should I park?",
-      answer: "Limited parking is available at both the ceremony and reception venues. We highly encourage using rideshare services like Uber or Lyft."
+      answer: "Limited parking is available and free at the sealing, ceremony, and reception venues. We highly encourage using rideshare services like Uber or Lyft."
     },
     {
       question: "Can I bring a plus one?",
-      answer: "Due to venue capacity, we are only able to accommodate guests whose names are explicitly stated on the invitation envelope."
+      answer: "Due to venue capacity, we are only able to accommodate guests whose names are explicitly stated on the invitation envelope. (Unless otherwise instructed.)"
     },
     {
       question: "What time should I arrive?",

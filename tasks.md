@@ -5,6 +5,4 @@ Major
 - 
 
 UI
-- on the wedding party, center the best man and maid of honor, and make their cards larger
 - details/dress code, make it the same as details/travel+stay
-- ```bug``` main page fades in and then the background effect kicks in

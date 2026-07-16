@@ -89,19 +89,19 @@ export default function Home() {
             }}
           />
           {heroLoaded && (
-            <div className="absolute inset-0 animate-in fade-in duration-1000">
+            <div className="absolute inset-0 animate-in fade-in duration-10">
               <img
                 src="/images/hero-bg.png"
                 alt="Floral background"
                 className="w-full h-full object-cover opacity-60"
               />
-              <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px]" />
+              <div className="absolute inset-0 bg-background/40 backdrop-blur-[3px]" />
             </div>
           )}
         </div>
 
         {heroLoaded && (
-          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20 animate-in fade-in duration-1000">
+          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20 animate-in fade-in duration-1500">
             <h2 className="tracking-[0.2em] uppercase text-sm md:text-base mb-6 text-foreground/80">
               Please join us for the wedding of
             </h2>
@@ -137,7 +137,7 @@ export default function Home() {
 
       {/* Welcome Section */}
       {heroLoaded && (
-        <section className="py-24 md:py-32 animate-in fade-in duration-1000">
+        <section className="py-24 md:py-32 animate-in fade-in duration-1500">
           <div className="container mx-auto px-4 max-w-4xl text-center">
             <h2 className="font-serif text-4xl md:text-5xl text-primary mb-8">
               Welcome

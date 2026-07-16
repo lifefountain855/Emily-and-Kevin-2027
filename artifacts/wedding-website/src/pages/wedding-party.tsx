@@ -59,14 +59,9 @@ export default function WeddingParty() {
                 <div
                   key={i}
                   className={`relative bg-card border p-6 text-center shadow-sm ${
-                    isHonoree ? "border-accent shadow-md" : "border-border"
+                    isHonoree ? "shadow-md" : "border-border side-cell"
                   }`}
                 >
-                  {isHonoree && (
-                    <span className="absolute top-4 right-4 uppercase tracking-widest text-[10px] font-medium text-accent-foreground bg-accent px-2 py-1 rounded-full">
-                      Maid of Honor
-                    </span>
-                  )}
                   <img
                     src="/images/bridesmaid.png"
                     alt={person.name}
@@ -101,14 +96,9 @@ export default function WeddingParty() {
                 <div
                   key={i}
                   className={`relative bg-card border p-6 text-center shadow-sm ${
-                    isHonoree ? "border-accent shadow-md" : "border-border"
+                    isHonoree ? "shadow-md" : "border-border side-cell"
                   }`}
                 >
-                  {isHonoree && (
-                    <span className="absolute top-4 right-4 uppercase tracking-widest text-[10px] font-medium text-accent-foreground bg-accent px-2 py-1 rounded-full">
-                      Best Man
-                    </span>
-                  )}
                   <img
                     src="/images/groomsman.png"
                     alt={person.name}

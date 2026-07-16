@@ -30,13 +30,13 @@ export function Navbar() {
         "fixed top-0 w-full z-50 transition-all duration-300",
         scrolled
           ? "bg-background/95 backdrop-blur-md shadow-sm py-4"
-          : "bg-transparent py-6"
+          : "bg-background/70 py-6"
       )}
     >
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between">
           <Link href="/" className="font-serif text-2xl tracking-wider text-primary hover:opacity-80 transition-opacity">
-            E & K
+            E <span className="text-accent">&</span> K
           </Link>
 
           {/* Desktop Nav */}

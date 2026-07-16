@@ -257,3 +257,8 @@
     inset: -1px;
   }
 }
+
+.side-cell{
+  margin-top: 12%;
+  margin-bottom: 12%;
+}
