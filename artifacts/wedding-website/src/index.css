@@ -61,8 +61,8 @@
   --elevate-1: rgba(0,0,0, .03);
   --elevate-2: rgba(0,0,0, .08);
 
-  /* Ivory background #eee7e2 */
-  --background: 28 25% 91%;
+  /* Ivory background */
+  --background: 28 33% 94%;
   /* Dark text #2c353e */
   --foreground: 214 17% 21%;
 
@@ -78,16 +78,16 @@
   --popover-foreground: 214 17% 21%;
   --popover-border: 28 15% 85%;
 
-  /* Dusty blue #7089a9 */
-  --primary: 214 25% 55%;
+  /* Slate blue #293E59 */
+  --primary: 214 36% 45%;
   --primary-foreground: 0 0% 100%;
 
   /* Sage green #859473 */
   --secondary: 87 13% 52%;
   --secondary-foreground: 0 0% 100%;
 
-  /* Terracotta #a64b29 */
-  --accent: 16 60% 41%;
+  /* Rose Orange #F5976C */
+  --accent: 19 87% 65%;
   --accent-foreground: 0 0% 100%;
 
   --muted: 18 10% 80%;
@@ -108,6 +108,10 @@
   --radius: 0.25rem; 
 }
 
+.text-secondary {
+  color: hsl(var(--secondary));
+}
+
 .dark {
   /* Minimal dark mode support as requested default to light */
   --background: 214 17% 15%;
@@ -119,13 +123,13 @@
   --popover: 214 17% 18%;
   --popover-foreground: 28 25% 91%;
   --popover-border: 214 17% 25%;
-  --primary: 214 25% 65%;
+  --primary: 214 54% 35%;
   --primary-foreground: 214 17% 15%;
   --secondary: 87 13% 62%;
   --secondary-foreground: 214 17% 15%;
   --muted: 214 17% 25%;
   --muted-foreground: 28 15% 80%;
-  --accent: 16 60% 51%;
+  --accent: 19 56% 96%;
   --accent-foreground: 214 17% 15%;
   --destructive: 0 62% 30%;
   --destructive-foreground: 28 25% 91%;

@@ -11,7 +11,7 @@ function CountdownTimer() {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2027-01-25T15:00:00").getTime();
+    const targetDate = new Date("2027-01-15T15:00:00").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -109,14 +109,14 @@ export default function Home() {
               Emily <span className="text-accent">&</span> Kevin
             </h1>
             <p className="text-xl md:text-2xl font-serif text-foreground/90 mb-12 italic">
-              January 25, 2027 • Seattle, WA
+              January 15, 2027 • Seattle, WA
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">
               <Link href="/rsvp" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto text-lg px-12 py-6 bg-primary hover:bg-primary/90 rounded-none tracking-widest uppercase"
+                  className="w-full sm:w-auto text-lg px-12 py-6 bg-secondary hover:bg-secondary/80 rounded-none tracking-widest uppercase"
                 >
                   RSVP Now
                 </Button>
@@ -125,7 +125,7 @@ export default function Home() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="w-full sm:w-auto text-lg px-12 py-6 border-primary text-primary hover:bg-primary/5 rounded-none tracking-widest uppercase"
+                  className="w-full sm:w-auto text-lg px-12 py-6 border-secondary text-secondary hover:bg-secondary/15 rounded-none tracking-widest uppercase"
                 >
                   Event Details
                 </Button>

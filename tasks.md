@@ -1,8 +1,13 @@
-Major
-- cookies - remember who it is
-  - if they have submitted the rsvp form
-  - if they have a special ```sealing_invited``` tag from entering the website through a specific link
-- 
+# Major
+- localstorage
+  - through a specific link
+- embedded google maps
+- embedded google forms
 
-UI
-- details/dress code, make it the same as details/travel+stay
+# UI
+- check for bugs
+
+# Details
+- fix event details
+- put in pictures for wedding party and accurate descriptions
+- fix our story and pictures

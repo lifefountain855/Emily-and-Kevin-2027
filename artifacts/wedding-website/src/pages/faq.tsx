@@ -40,7 +40,7 @@ export default function Faq() {
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, i) => (
             <AccordionItem key={i} value={`item-${i}`} className="border-b border-border py-2">
-              <AccordionTrigger className="font-serif text-xl text-foreground hover:text-primary transition-colors text-left">
+              <AccordionTrigger className="font-serif text-xl text-foreground hover:text-secondary transition-colors text-left">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="text-foreground/80 leading-relaxed text-base">

@@ -7,6 +7,7 @@ import Home from "@/pages/home";
 import Details from "@/pages/details";
 import OurStory from "@/pages/our-story";
 import Rsvp from "@/pages/rsvp";
+import webRSVP from "@/pages/rsvp-web";
 import WeddingParty from "@/pages/wedding-party";
 import Faq from "@/pages/faq";
 import Registry from "@/pages/registry";
@@ -22,6 +23,7 @@ function Router() {
         <Route path="/details" component={Details} />
         <Route path="/our-story" component={OurStory} />
         <Route path="/rsvp" component={Rsvp} />
+        <Route path="/rsvp-test" component={webRSVP} />
         <Route path="/wedding-party" component={WeddingParty} />
         <Route path="/faq" component={Faq} />
         <Route path="/registry" component={Registry} />

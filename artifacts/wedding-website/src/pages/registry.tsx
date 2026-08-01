@@ -11,35 +11,37 @@ export default function Registry() {
         </p>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <a href="#" target="_blank" rel="noreferrer" className="block group">
-            <div className="bg-card border border-border p-8 h-full flex flex-col items-center justify-center hover:border-primary transition-colors shadow-sm">
-              <h3 className="font-serif text-2xl text-foreground group-hover:text-primary transition-colors mb-4">Crate & Barrel</h3>
+          <a href="#" target="_blank" rel="noreferrer noopener" className="block group">
+            <div className="bg-card border border-border p-8 h-fprull flex flex-col items-center justify-center hover:border-secondary transition-colors shadow-sm">
+              <h3 className="font-serif text-2xl text-foreground group-hover:text-secondary transition-colors mb-4">Crate & Barrel</h3>
               <span className="text-sm tracking-widest uppercase text-muted-foreground">View Registry</span>
             </div>
           </a>
-          <a href="#" target="_blank" rel="noreferrer" className="block group">
-            <div className="bg-card border border-border p-8 h-full flex flex-col items-center justify-center hover:border-primary transition-colors shadow-sm">
-              <h3 className="font-serif text-2xl text-foreground group-hover:text-primary transition-colors mb-4">Target</h3>
+          <a href="#" target="_blank" rel="noreferrer noopener" className="block group">
+            <div className="bg-card border border-border p-8 h-full flex flex-col items-center justify-center hover:border-secondary transition-colors shadow-sm">
+              <h3 className="font-serif text-2xl text-foreground group-hover:text-secondary transition-colors mb-4">Target</h3>
               <span className="text-sm tracking-widest uppercase text-muted-foreground">View Registry</span>
             </div>
           </a>
-          <a href="#" target="_blank" rel="noreferrer" className="block group">
-            <div className="bg-card border border-border p-8 h-full flex flex-col items-center justify-center hover:border-primary transition-colors shadow-sm">
-              <h3 className="font-serif text-2xl text-foreground group-hover:text-primary transition-colors mb-4">Amazon</h3>
+          <a href="#" target="_blank" rel="noreferrer noopener" className="block group">
+            <div className="bg-card border border-border p-8 h-full flex flex-col items-center justify-center hover:border-secondary transition-colors shadow-sm">
+              <h3 className="font-serif text-2xl text-foreground group-hover:text-secondary transition-colors mb-4">Amazon</h3>
               <span className="text-sm tracking-widest uppercase text-muted-foreground">View Registry</span>
             </div>
           </a>
         </div>
 
         <div className="bg-secondary/10 border border-secondary/20 p-12 max-w-2xl mx-auto">
-          <h2 className="font-serif text-3xl text-secondary-foreground mb-4">Honeymoon Fund</h2>
+          <h2 className="font-serif text-3xl text-secondary mb-4">Honeymoon Fund</h2>
           <p className="text-foreground/80 mb-8 font-light">
             We are also planning a trip to Italy for our honeymoon! If you'd prefer, 
             you can contribute to our adventure fund.
           </p>
-          <Button className="bg-secondary hover:bg-secondary/90 text-secondary-foreground tracking-widest uppercase">
+          <a href="#" target="_blank" rel="noreferrer noopener">
+          <Button className="bg-secondary text-secondary-foreground tracking-widest uppercase hover:bg-card hover:text-secondary hover:transition-colors">
             Contribute
           </Button>
+        </a>
         </div>
       </div>
     </div>

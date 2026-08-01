@@ -4,14 +4,14 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <h2 className="font-serif text-3xl mb-4 text-primary">Emily <span className="text-accent">&</span> Kevin</h2>
         <p className="text-muted-foreground tracking-widest uppercase text-sm mb-8">
-          January 25, 2027 • Seattle, WA
+          January 15, 2027 • Seattle, WA
         </p>
 
         <div className="max-w-md mx-auto mb-8 text-foreground/80">
           <p className="mb-2">Questions? We'd love to help.</p>
           <a
             href="mailto:kevinandemilysapp@gmail.com"
-            className="text-primary hover:underline"
+            className="text-secondary hover:underline"
           >
             kevinandemilysapp@gmail.com
           </a>
