@@ -14,27 +14,27 @@ export default function Details() {
   }, []);
   const events = [
     {
-      time: "Friday, 1:00 PM",
+      time: "12:00 PM",
       title: "Ring Ceremony",
-      desc: "By invite only. Please arrive 15 minutes early.",
+      desc: "By invite only. Please be seated 15 minutes early.",
     },
     {
-      time: "Friday, 2:00 AM",
+      time: "2:30 AM",
       title: "Sealing Ceremony",
       desc: "Private ceremony for immediate family.",
     },
     {
-      time: "Friday, 5:30 PM",
+      time: "6:30 PM",
       title: "Reception Begins",
-      desc: "Light hors d'oeuvres and drinks.",
+      desc: "Speeches, special dances, and cake.",
     },
     {
-      time: "Friday, 8:00 PM",
+      time: "7:45 PM",
       title: "Dancing",
       desc: "Bring your dancing shoes!",
     },
     {
-      time: "Friday, 9:00 PM",
+      time: "9:00 PM",
       title: "Send-Off",
       desc: "Rice? Sparklers? Bring it!",
     },
@@ -86,12 +86,12 @@ export default function Details() {
               Ring Ceremony
             </h2>
             <p className="text-muted-foreground uppercase tracking-widest text-sm mb-6">
-              3:00 PM
+              12 PM
             </p>
             <div className="mb-6 space-y-2 text-foreground/80">
-              <p className="font-medium">The Grand Conservatory</p>
-              <p>123 Botanical Way</p>
-              <p>Salt Lake City, UT 84101</p>
+              <p className="font-medium">Redmond Ridge Events Center</p>
+              <p>10315 NE Cedar Park Cres</p>
+              <p>Redmond, WA 98053</p>
             </div>
             <div className="aspect-video bg-card relative overflow-hidden group">
               <div className="absolute inset-0 bg-card flex items-center justify-center">
@@ -109,7 +109,7 @@ export default function Details() {
           <div className="bg-card p-8 border border-border shadow-sm">
             <h2 className="font-serif text-3xl text-accent mb-2">Reception</h2>
             <p className="text-muted-foreground uppercase tracking-widest text-sm mb-6">
-              5:30 PM - 10:30 PM
+              6:30 PM - 10:00 PM
             </p>
             <div className="mb-6 space-y-2 text-foreground/80">
               <p className="font-medium">
@@ -138,6 +138,9 @@ export default function Details() {
             <h2 className="font-serif text-4xl text-primary text-center mb-12">
               Day Timeline
             </h2>
+            <p className="font-serif text-l text-center mb-12">
+              All events are on friday.
+            </p>
             <div className="max-w-2xl mx-auto relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border before:to-transparent">
               {events.map((item, i) => (
                 <div
@@ -166,9 +169,12 @@ export default function Details() {
 
         {invitationLevel != 2 && (
           <div className="mb-24">
-            <h2 className="font-serif text-4xl text-primary text-center mb-12">
+            <h2 className="font-serif text-4xl text-primary text-center mb-2">
               Day Timeline
             </h2>
+            <p className="font-serif text-l text-center mb-12">
+              All events are on friday.
+            </p>
             <div className="max-w-2xl mx-auto relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border before:to-transparent">
               {withoutSealing.map((item, i) => (
                 <div
@@ -197,23 +203,6 @@ export default function Details() {
 
         {/* Travel & Dress Code */}
         <div className="grid md:grid-cols-2 gap-12">
-          {/* <div className="bg-primary/5 p-8">
-            <h2 className="font-serif text-3xl text-primary mb-6">
-              Dress Code
-            </h2>
-            <p className="text-foreground/80 mb-4">
-              <strong>Formal / Cocktail Attire</strong>
-            </p>
-            <p className="text-foreground/80 mb-4">
-              We request formal or cocktail attire for our celebration. The
-              venues are primarily indoors, but the Ring Ceremony has an outdoor
-              garden component.
-            </p>
-            <ul className="list-disc list-inside text-foreground/80 space-y-2 ml-4">
-              <li>Layers are recommended as January in Utah is cold.</li>
-              <li>Block heels or flats are suggested for the garden paths.</li>
-            </ul>
-          </div> */}
           <div className="bg-primary/5 p-8">
             <h2 className="font-serif text-3xl text-primary mb-6">
               Dress Code

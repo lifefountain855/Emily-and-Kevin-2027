@@ -1,4 +1,5 @@
 import { Switch, Route, Router as WouterRouter } from "wouter";
+import { useHashLocation } from "wouter/use-hash-location";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,7 +8,6 @@ import Home from "@/pages/home";
 import Details from "@/pages/details";
 import OurStory from "@/pages/our-story";
 import Rsvp from "@/pages/rsvp";
-import webRSVP from "@/pages/rsvp-web";
 import WeddingParty from "@/pages/wedding-party";
 import Faq from "@/pages/faq";
 import Registry from "@/pages/registry";
@@ -23,7 +23,6 @@ function Router() {
         <Route path="/details" component={Details} />
         <Route path="/our-story" component={OurStory} />
         <Route path="/rsvp" component={Rsvp} />
-        <Route path="/rsvp-test" component={webRSVP} />
         <Route path="/wedding-party" component={WeddingParty} />
         <Route path="/faq" component={Faq} />
         <Route path="/registry" component={Registry} />
@@ -37,7 +36,10 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+        <WouterRouter
+          base={import.meta.env.BASE_URL.replace(/\/$/, "")}
+          hook={useHashLocation}
+        >
           <Router />
         </WouterRouter>
         <Toaster />

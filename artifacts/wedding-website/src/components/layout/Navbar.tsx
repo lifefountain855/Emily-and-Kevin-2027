@@ -6,11 +6,11 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/details", label: "Details" },
+  { href: "/rsvp", label: "RSVP" },
   { href: "/our-story", label: "Our Story" },
+  { href: "/registry", label: "Registry" },
   { href: "/wedding-party", label: "Wedding Party" },
   { href: "/faq", label: "FAQ" },
-  { href: "/registry", label: "Registry" },
-  { href: "/rsvp", label: "RSVP" },
 ];
 
 export function Navbar() {

@@ -91,11 +91,11 @@ export default function Home() {
           {heroLoaded && (
             <div className="absolute inset-0 animate-in fade-in duration-10">
               <img
-                src="/images/hero-bg.png"
+                src="/images/hero-bg.webp"
                 alt="Floral background"
                 className="w-full h-full object-cover opacity-60"
               />
-              <div className="absolute inset-0 bg-background/40 backdrop-blur-[3px]" />
+              <div className="absolute inset-0 bg-background/40" />
             </div>
           )}
         </div>
