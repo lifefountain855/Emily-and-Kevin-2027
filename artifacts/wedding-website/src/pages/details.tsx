@@ -100,7 +100,7 @@ export default function Details() {
                   width="350"
                   height="200"
                   loading="lazy"
-                  referrerpolicy="strict-origin-when-cross-origin"
+                  referrerPolicy="strict-origin-when-cross-origin"
                 ></iframe>
               </div>
             </div>
@@ -125,7 +125,7 @@ export default function Details() {
                   width="350"
                   height="180"
                   loading="lazy"
-                  referrerpolicy="strict-origin-when-cross-origin"
+                  referrerPolicy="strict-origin-when-cross-origin"
                 ></iframe>
               </div>
             </div>

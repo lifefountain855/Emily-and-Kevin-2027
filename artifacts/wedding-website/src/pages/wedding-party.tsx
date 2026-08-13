@@ -11,14 +11,14 @@ export default function WeddingParty() {
       name: "Kiana",
       role: "Maid of Honor",
       relation: "Best Friend",
-      img: "/images/bridesmaid.png",
+      img: "/images/bridesmaid1.png",
       bio: "Kiana has been Emily's partner in crime since day one.",
     },
     {
       name: "Carla Smurthwaite",
       role: "Bridesmaid",
       relation: "Groom's Roomate's Cousin",
-      img: "/images/bridesmaid.png",
+      img: "/images/bridesmaid2.png",
       bio: "Met by chance, stayed by choice.",
     },
   ];
@@ -35,14 +35,14 @@ export default function WeddingParty() {
       name: "Chris Foster",
       role: "Best Man",
       relation: "Mission Companion",
-      img: "/images/groomsman.png",
+      img: "/images/groomsman1.png",
       bio: "Kevin's friend, companion, and role model.",
     },
     {
       name: "Levi Forson",
       role: "Groomsman",
       relation: "College Friend",
-      img: "/images/groomsman.png",
+      img: "/images/groomsman2.png",
       bio: "Always the life of the party.",
     },
   ];
@@ -69,7 +69,7 @@ export default function WeddingParty() {
                   }`}
                 >
                   <img
-                    src="/images/bridesmaid.png"
+                    src={person.img}
                     alt={person.name}
                     className={`rounded-full object-cover mx-auto mb-6 shadow ${
                       isHonoree ? "w-56 h-56" : "w-48 h-48"
@@ -106,7 +106,7 @@ export default function WeddingParty() {
                   }`}
                 >
                   <img
-                    src="/images/groomsman.png"
+                    src={person.img}
                     alt={person.name}
                     className={`rounded-full object-cover mx-auto mb-6 shadow ${
                       isHonoree ? "w-56 h-56" : "w-48 h-48"
