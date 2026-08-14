@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
 
 const WORKER_URL = "https://google-photos.kevgumball.workers.dev";
+interface PhotoProps {
+  id: any;
+  baseUrl: string;
+}
 
-export default function PhotoGallery({ albumUrl }) {
+export default function PhotoGallery({ albumUrl }: { albumUrl: string }) {
   const [photos, setPhotos] = useState([]);
   const [failedPhotoIds, setFailedPhotoIds] = useState(new Set());
-  const [activePhoto, setActivePhoto] = useState(null); // Lightbox state
+  const [activePhoto, setActivePhoto] = useState<PhotoProps | null>(null); // Lightbox state
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     if (!albumUrl) {
@@ -17,7 +21,7 @@ export default function PhotoGallery({ albumUrl }) {
 
     const fetchAlbum = async () => {
       setLoading(true);
-      setError(null);
+      setError("");
       setFailedPhotoIds(new Set());
 
       try {
@@ -42,14 +46,14 @@ export default function PhotoGallery({ albumUrl }) {
 
   // Handle keyboard shortcut (Escape key) to close lightbox
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: { key: string }) => {
       if (e.key === "Escape") setActivePhoto(null);
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  const handleImageError = (id) => {
+  const handleImageError = (id: string) => {
     setFailedPhotoIds((prev) => new Set(prev).add(id));
   };
 
@@ -77,7 +81,9 @@ export default function PhotoGallery({ albumUrl }) {
     );
   }
 
-  const visiblePhotos = photos.filter((photo) => !failedPhotoIds.has(photo.id));
+  const visiblePhotos = photos.filter(
+    (photo: PhotoProps) => !failedPhotoIds.has(photo.id),
+  );
 
   if (visiblePhotos.length === 0) {
     return (
@@ -91,7 +97,7 @@ export default function PhotoGallery({ albumUrl }) {
     <div className="max-w-[1200px] mx-auto p-5">
       {/* Grid View */}
       <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-4">
-        {visiblePhotos.map((photo) => (
+        {visiblePhotos.map((photo: PhotoProps) => (
           <img
             key={photo.id}
             src={`${photo.baseUrl}=w500-h500-c`}
