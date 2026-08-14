@@ -1,17 +1,37 @@
 import { Link, useLocation } from "wouter";
-import { Menu, X } from "lucide-react";
+import { GitMergeIcon, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/details", label: "Details" },
-  { href: "/rsvp", label: "RSVP" },
-  { href: "/our-story", label: "Our Story" },
-  { href: "/registry", label: "Registry" },
-  { href: "/wedding-party", label: "Wedding Party" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/photo-wall", label: "Photo Wall" },
+  { href: "/", label: "Home", color: "foreground/20", weight: "bold" },
+  { href: "/details", label: "Details", color: "accent", weight: "medium" },
+  { href: "/rsvp", label: "RSVP", color: "accent", weight: "medium" },
+  {
+    href: "/registry",
+    label: "Registry",
+    color: "secondary",
+    weight: "medium",
+  },
+  {
+    href: "/our-story",
+    label: "Our Story",
+    color: "foreground/20",
+    weight: "light",
+  },
+  {
+    href: "/photo-wall",
+    label: "Photo Wall",
+    color: "foreground/20",
+    weight: "light",
+  },
+  {
+    href: "/wedding-party",
+    label: "Wedding Party",
+    color: "foreground/20",
+    weight: "light",
+  },
+  { href: "/faq", label: "FAQ", color: "foreground/20", weight: "light" },
 ];
 
 export function Navbar() {
@@ -50,10 +70,10 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-sm tracking-widest uppercase transition-colors hover:text-primary",
+                  `text-sm tracking-widest uppercase transition-colors hover:text-${item.color == "foreground/20" ? "primary" : item.color}`,
                   location === item.href
-                    ? "text-primary font-medium"
-                    : "text-foreground/80",
+                    ? `text-primary ${item.weight ? `font-${item.weight}` : ""}`
+                    : `text-${item.color} ${item.weight ? `font-${item.weight}` : ""}`,
                 )}
               >
                 {item.label}
@@ -82,7 +102,9 @@ export function Navbar() {
               onClick={() => setIsOpen(false)}
               className={cn(
                 "block text-lg tracking-wider transition-colors",
-                location === item.href ? "text-primary" : "text-foreground/80",
+                location === item.href
+                  ? `text-primary ${item.weight ? `font-${item.weight}` : ""}`
+                  : ` ${item.weight ? `font-${item.weight}` : ""}`,
               )}
             >
               {item.label}

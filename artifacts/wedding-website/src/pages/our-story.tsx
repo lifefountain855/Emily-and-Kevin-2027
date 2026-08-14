@@ -10,7 +10,8 @@ export default function OurStory() {
 
         <div className="mb-24 text-center max-w-2xl mx-auto">
           <img
-            src="/images/couple-1.png"
+            src="https://lh3.googleusercontent.com/pw/AP1GczMSnq5Y3AGxoUkHDK6WqjKJRQRED1eCLiC2owCyPvT1bu50Aw21Nzy8SudTYAwOTrZ06JgVPgwKnuDyQk4ez6q1Z3h0gsOxh7eDjFI84FztfA8bHmg=w2048"
+            //src="/images/couple-1.png"
             alt="Emily and Kevin"
             className="w-full aspect-[4/3] object-cover mb-8 rounded shadow-sm"
           />
@@ -36,8 +37,7 @@ export default function OurStory() {
             After many adventures and hard conversations about goals and
             marriage, they went looking at rings. Eventually, they found the
             one. A beautiful, shining brilliant cut diamond set in a gold band.
-            During a sunset hike to a hidden alpine lake, he completely
-            surprised Emily by getting down on one knee. It was the easiest
+            She knew the day was coming, He took her to a lovely park in a cove of trees, and asked her the question, getting down on one knee. It was the easiest
             "yes" of her life.
           </p>
           <img
@@ -46,7 +46,6 @@ export default function OurStory() {
             className="w-full aspect-[4/3] object-cover mt-8 rounded shadow-sm"
           />
         </div>
-        {/* <PhotoGallery /> */}
       </div>
     </div>
   );
