@@ -139,7 +139,7 @@ export default function Details() {
               Day Timeline
             </h2>
             <p className="font-serif text-l text-center mb-12">
-              All events are on friday.
+              All events are on Friday.
             </p>
             <div className="max-w-2xl mx-auto relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border before:to-transparent">
               {events.map((item, i) => (
@@ -173,7 +173,7 @@ export default function Details() {
               Day Timeline
             </h2>
             <p className="font-serif text-l text-center mb-12">
-              All events are on friday.
+              All events are on Friday.
             </p>
             <div className="max-w-2xl mx-auto relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border before:to-transparent">
               {withoutSealing.map((item, i) => (
@@ -212,8 +212,7 @@ export default function Details() {
                 <h3 className="font-medium text-lg mb-1">Formal / Cocktail</h3>
                 <p>
                   We request formal or cocktail attire for our celebration. The
-                  venues are primarily indoors, but the Ring Ceremony has an
-                  outdoor garden component.
+                  venues are primarily indoors.
                 </p>
               </div>
               <div>
@@ -234,24 +233,15 @@ export default function Details() {
               <div>
                 <h3 className="font-medium text-lg mb-1">Nearest Airport</h3>
                 <p>
-                  Salt Lake City International (SLC) — 15 mins from downtown.
+                  Seattle-Tacoma International (SEA) — 20 mins from the temple and 45 mins to the venue.
                 </p>
               </div>
-              <div>
-                <h3 className="font-medium text-lg mb-1">Hotel Block</h3>
-                <p>The Grand America Hotel</p>
-                <a
-                  href="#"
-                  className="text-primary underline mt-1 inline-block"
-                >
-                  Book with our group rate
-                </a>
-              </div>
+  
               <div>
                 <h3 className="font-medium text-lg mb-1">Transportation</h3>
                 <p>
-                  We recommend using rideshare (Uber/Lyft). Limited parking is
-                  available at both venues.
+                  We recommend using rideshare (Uber/Lyft) or ride with a friend. Free parking is
+                  available at all places.
                 </p>
               </div>
             </div>

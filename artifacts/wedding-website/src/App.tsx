@@ -11,6 +11,7 @@ import Rsvp from "@/pages/rsvp";
 import WeddingParty from "@/pages/wedding-party";
 import Faq from "@/pages/faq";
 import Registry from "@/pages/registry";
+import PhotoWall from "@/pages/photo-wall";
 import { RootLayout } from "@/components/layout/RootLayout";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ function Router() {
         <Route path="/wedding-party" component={WeddingParty} />
         <Route path="/faq" component={Faq} />
         <Route path="/registry" component={Registry} />
+        <Route path="/photo-wall" component={PhotoWall} />
         <Route component={NotFound} />
       </Switch>
     </RootLayout>
