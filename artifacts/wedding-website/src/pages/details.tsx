@@ -14,14 +14,14 @@ export default function Details() {
   }, []);
   const events = [
     {
-      time: "12:00 PM",
-      title: "Ring Ceremony",
-      desc: "By invite only. Please be seated 15 minutes early.",
+      time: "2:00 PM",
+      title: "Sealing Ceremony",
+      desc: "Private ceremony for invited people.",
     },
     {
-      time: "2:30 AM",
-      title: "Sealing Ceremony",
-      desc: "Private ceremony for immediate family.",
+      time: "5:30 PM",
+      title: "Ring Ceremony",
+      desc: "By invite only. Please be seated 15 minutes early.",
     },
     {
       time: "6:30 PM",
@@ -29,24 +29,25 @@ export default function Details() {
       desc: "Speeches, special dances, and cake.",
     },
     {
-      time: "7:45 PM",
+      time: "7:30 PM",
       title: "Dancing",
       desc: "Bring your dancing shoes!",
     },
     {
-      time: "9:00 PM",
+      time: "8:30 PM",
       title: "Send-Off",
       desc: "Rice? Sparklers? Bring it!",
     },
   ];
   const withoutSealing = [...events];
-  withoutSealing.splice(1, 1);
+  withoutSealing.splice(0, 1);
 
   return (
     <div className="animate-in fade-in duration-1000 pt-32 pb-24">
       <div className="container mx-auto px-4 max-w-4xl">
         <h1 className="font-serif text-5xl md:text-6xl text-primary text-center mb-16">
           Event Details
+          <p className="text-3xl text-primary/80 mx-1">for 01/16/26</p>
         </h1>
 
         {invitationLevel == 2 && (
@@ -56,7 +57,7 @@ export default function Details() {
                 Sealing Ceremony
               </h2>
               <p className="text-muted-foreground uppercase tracking-widest text-sm mb-6">
-                Friday, 11:00 AM &bull; Invite Only
+                Saturday, 2:00 PM &bull; Invite Only
               </p>
               <div className="mb-6 space-y-2 text-foreground/80">
                 <p className="font-medium">Seattle Washington Temple</p>
@@ -80,50 +81,33 @@ export default function Details() {
         )}
 
         {/* Venues */}
-        <div className="grid md:grid-cols-2 gap-12 mb-24">
-          <div className="bg-card p-8 border border-border shadow-sm">
-            <h2 className="font-serif text-3xl text-accent mb-2">
-              Ring Ceremony
-            </h2>
-            <p className="text-muted-foreground uppercase tracking-widest text-sm mb-6">
-              12 PM
-            </p>
-            <div className="mb-6 space-y-2 text-foreground/80">
-              <p className="font-medium">Redmond Ridge Events Center</p>
-              <p>10315 NE Cedar Park Cres</p>
-              <p>Redmond, WA 98053</p>
-            </div>
-            <div className="aspect-video bg-card relative overflow-hidden group">
-              <div className="absolute inset-0 bg-card flex items-center justify-center">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1008.7964815759433!2d-122.04508214433716!3d47.69060753841981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54907346551111e3%3A0x4d8a1143d873e8e7!2sRedmond%20Ridge%20Community%20and%20Event%20Center!5e1!3m2!1sen!2sus!4v1785621669959!5m2!1sen!2sus"
-                  width="350"
-                  height="200"
-                  loading="lazy"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                ></iframe>
+        <div className="bg-card p-2 border border-border shadow-sm mb-24">
+          <div className="items-center grid md:grid-cols-2 gap-3">
+            <div className="p-6">
+              <h2 className="font-serif text-3xl text-accent mb-2">
+                Ring Ceremony
+              </h2>
+              <p className="text-muted-foreground uppercase tracking-widest text-sm mb-6">
+                5:30-6:00 PM
+              </p>
+              <h2 className="font-serif text-3xl text-accent mb-2">
+                Reception
+              </h2>
+              <p className="text-muted-foreground uppercase tracking-widest text-sm mb-6">
+                6:30 PM - 10:00 PM
+              </p>
+              <div className="space-y-2 text-foreground/80">
+                <p className="font-medium">Redmond Ridge Events Center</p>
+                <p>10315 NE Cedar Park Cres</p>
+                <p>Redmond, WA 98053</p>
               </div>
             </div>
-          </div>
 
-          <div className="bg-card p-8 border border-border shadow-sm">
-            <h2 className="font-serif text-3xl text-accent mb-2">Reception</h2>
-            <p className="text-muted-foreground uppercase tracking-widest text-sm mb-6">
-              6:30 PM - 10:00 PM
-            </p>
-            <div className="mb-6 space-y-2 text-foreground/80">
-              <p className="font-medium">
-                Church of Jesus Christ of Latter-Day Saints
-              </p>
-              <p>15205 SE 28th St</p>
-              <p>Bellevue, WA 98007</p>
-            </div>
-            <div className="aspect-video bg-card relative overflow-hidden group">
-              <div className="absolute inset-0 bg-card flex items-center justify-center">
+            <div className="p-2">
+              <div className="aspect-[4/3] relative overflow-hidden group">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2609.4249013492863!2d-122.1411637709548!3d47.58453267664972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906e9fec812ff5%3A0x2b9eb977e80a67f2!2sThe%20Church%20of%20Jesus%20Christ%20of%20Latter-day%20Saints!5e1!3m2!1sen!2sus!4v1785621160608!5m2!1sen!2sus"
-                  width="350"
-                  height="180"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5532.21862661802!2d-122.044314!3d47.690657!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54907346551111e3%3A0x4d8a1143d873e8e7!2sRedmond%20Ridge%20Community%20and%20Event%20Center!5e1!3m2!1sen!2sus!4v1786901360660!5m2!1sen!2sus"
+                  className="absolute inset-0 w-full h-full border-0"
                   loading="lazy"
                   referrerPolicy="strict-origin-when-cross-origin"
                 ></iframe>
@@ -139,7 +123,7 @@ export default function Details() {
               Day Timeline
             </h2>
             <p className="font-serif text-l text-center mb-12">
-              All events are on Friday.
+              All events are on Saturday.
             </p>
             <div className="max-w-2xl mx-auto relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border before:to-transparent">
               {events.map((item, i) => (
@@ -173,7 +157,7 @@ export default function Details() {
               Day Timeline
             </h2>
             <p className="font-serif text-l text-center mb-12">
-              All events are on Friday.
+              All events are on Saturday.
             </p>
             <div className="max-w-2xl mx-auto relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border before:to-transparent">
               {withoutSealing.map((item, i) => (
@@ -203,16 +187,16 @@ export default function Details() {
 
         {/* Travel & Dress Code */}
         <div className="grid md:grid-cols-2 gap-12">
-          <div className="bg-primary/5 p-8">
-            <h2 className="font-serif text-3xl text-primary mb-6">
+          <div className="bg-secondary/10 p-8">
+            <h2 className="font-serif text-3xl text-secondary mb-6">
               Dress Code
             </h2>
             <div className="space-y-6 text-foreground/80">
               <div>
-                <h3 className="font-medium text-lg mb-1">Formal / Cocktail</h3>
+                <h3 className="font-medium text-lg mb-1">Formal</h3>
                 <p>
-                  We request formal or cocktail attire for our celebration. The
-                  venues are primarily indoors.
+                  We request formal attire for our celebration. The venues are
+                  primarily indoors.
                 </p>
               </div>
               <div>
@@ -225,23 +209,24 @@ export default function Details() {
             </div>
           </div>
 
-          <div className="bg-primary/5 p-8">
-            <h2 className="font-serif text-3xl text-primary mb-6">
+          <div className="bg-secondary/10 p-8">
+            <h2 className="font-serif text-3xl text-secondary mb-6">
               Travel & Stay
             </h2>
             <div className="space-y-6 text-foreground/80">
               <div>
                 <h3 className="font-medium text-lg mb-1">Nearest Airport</h3>
                 <p>
-                  Seattle-Tacoma International (SEA) — 20 mins from the temple and 45 mins to the venue.
+                  Seattle-Tacoma International (SEA) — 20 mins from the temple
+                  and 45 mins to the venue.
                 </p>
               </div>
-  
+
               <div>
                 <h3 className="font-medium text-lg mb-1">Transportation</h3>
                 <p>
-                  We recommend using rideshare (Uber/Lyft) or ride with a friend. Free parking is
-                  available at all places.
+                  We recommend using rideshare (Uber/Lyft) or ride with a
+                  friend. Free parking is available at all places.
                 </p>
               </div>
             </div>

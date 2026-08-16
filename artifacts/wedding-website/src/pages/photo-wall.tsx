@@ -15,16 +15,18 @@ export default function PhotoWall() {
         />
         <p className="font-serif text-4xl md:text-5xl text-accent text-center m-5 mt-20">
           Wedding!
+          <h3 className="text-xl mt-2">Check back in later...</h3>
         </p>
-        <PhotoGallery
+        {/* <PhotoGallery
           albumUrl={"https://photos.app.goo.gl/rW7DBNy2ny12DQgN8"}
-        />
+        /> */}
         <p className="font-serif text-4xl md:text-5xl text-secondary text-center m-5 mt-20">
           Reception!
+          <h3 className="text-xl mt-2">Check back in later...</h3>
         </p>
-        <PhotoGallery
+        {/* <PhotoGallery
           albumUrl={"https://photos.app.goo.gl/G86PzJQkyFgg4p747"}
-        />
+        /> */}
       </div>
     </div>
   );

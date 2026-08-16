@@ -4,15 +4,15 @@ export default function Faq() {
   const faqs = [
     {
       question: "Are children invited?",
-      answer: "We love your little ones! However, we have decided to keep our sealing an adults-only event. Children are more than welcome to join us for the ring ceremony and reception."
+      answer: "Children are more than welcome to join us for the ring ceremony and reception!"
     },
     {
       question: "What is the dress code?",
-      answer: "We request formal or cocktail attire. Keep in mind that Utah can be quite chilly in January, so please bring warm layers. The ring ceremony will have some outdoor garden components, so block heels or flats are recommended."
+      answer: "We request formalattire. Keep in mind that Washington can be chilly in January, and it may snow or rain so bring warm layers."
     },
     {
       question: "Where should I park?",
-      answer: "Limited parking is available and free at the sealing, ceremony, and reception venues. We highly encourage using rideshare services like Uber or Lyft."
+      answer: "There is free parking is at both venues."
     },
     {
       question: "Can I bring a plus one?",
@@ -20,15 +20,11 @@ export default function Faq() {
     },
     {
       question: "What time should I arrive?",
-      answer: "For the ring ceremony, please arrive by 2:45 PM to ensure you are seated before the ceremony begins at 3:00 PM."
-    },
-    {
-      question: "Will there be options for dietary restrictions?",
-      answer: "Yes, our caterer can accommodate a variety of dietary needs. Please make sure to note any specific restrictions when you RSVP."
+      answer: "For the ring ceremony, please arrive by 5:15 PM to ensure you are seated before the ceremony begins at 5:30 PM."
     },
     {
       question: "When is the RSVP deadline?",
-      answer: "Please RSVP by November 15th so we can finalize our numbers with the caterer and venue."
+      answer: "Please RSVP by November 15th so we can finalize numbers for the venue and food."
     }
   ];
 

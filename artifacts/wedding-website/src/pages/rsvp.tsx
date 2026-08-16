@@ -185,11 +185,10 @@ export default function Rsvp() {
   return (
     <div className="animate-in fade-in duration-1000 pt-32 pb-24">
       <div className="container mx-auto px-4 max-w-3xl text-center">
-        <h1 className="font-serif text-5xl md:text-6xl text-primary mb-8">
+        <h1 className="font-serif text-5xl md:text-6xl text-primary mb-2">
           RSVP
+          <p className="text-3xl text-primary/80 mx-1">for 01/16/26</p>
         </h1>
-        <br></br>
-        <br></br>
         {rsvpPassed == 1 && (
           <div>
             <p className="text-4xl font-serif text-accent mb-12">
@@ -209,11 +208,19 @@ export default function Rsvp() {
           </div>
         )}
         {rsvpPassed == 0 && (
-          <div>
-            <p className="text-lg text-foreground/80 mb-2">
+          <div className="mt-4">
+            <p className="text-2xl text-primary/80 mx-1">
+              2:00PM - Sealing Ordinance
+            </p>
+            <p className="text-xl text-primary/80 mx-1">
+              5:30PM - Ring Ceremony
+            </p>
+            <p className="text-xl text-primary/80 mx-1">6:30PM - Reception</p>
+            <p className="text-xl text-primary/80 mx-1">~Seattle, WA~</p>
+            <p className="text-lg text-foreground/80 mt-10">
               Please let us know if you'll be celebrating with us by
             </p>
-            <p className="text-4xl font-serif text-accent mb-12">
+            <p className="text-4xl font-serif text-accent mb-8">
               November 15th
             </p>
           </div>

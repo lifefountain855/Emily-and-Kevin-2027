@@ -11,7 +11,7 @@ function CountdownTimer() {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2027-01-15T15:00:00").getTime();
+    const targetDate = new Date("2027-01-16T15:00:00").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -95,7 +95,7 @@ export default function Home() {
               Emily <span className="text-accent">&</span> Kevin
             </h1>
             <p className="text-xl md:text-2xl font-serif text-foreground/90 mb-12 italic">
-              January 15, 2027 • Seattle, WA
+              January 16, 2027 • Seattle, WA
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">
