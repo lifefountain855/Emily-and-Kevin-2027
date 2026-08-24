@@ -6,7 +6,7 @@ const USER = UserProfile.initLoad();
 
 let rsvpPassed = 0;
 
-const passedDate = new Date(2026, 10, 15); // 10 is nov
+const passedDate = new Date(2026, 10, 20); // 10 is nov
 // initial check
 const now = new Date();
 if (now >= passedDate) {
@@ -221,7 +221,7 @@ export default function Rsvp() {
               Please let us know if you'll be celebrating with us by
             </p>
             <p className="text-4xl font-serif text-accent mb-8">
-              November 15th
+              November 20th
             </p>
           </div>
         )}

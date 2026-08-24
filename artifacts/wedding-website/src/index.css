@@ -261,13 +261,3 @@
     inset: -1px;
   }
 }
-
-.side-cell{
-  margin-top: 12%;
-  margin-bottom: 12%;
-}
-/* 
-.bg-secondary\/10 {
-  @supports (color: color-mix(in lab, red, red));
-  background-color: color-mix(in oklab, hsl(var(--secondary)) 10%, transparent);
-} */

@@ -1,18 +1,18 @@
 export default function WeddingParty() {
   const bridesmaids = [
     {
-      name: "Jessica Smith",
-      role: "Bridesmaid",
-      relation: "Childhood Friend",
-      img: "/images/bridesmaid.png",
-      bio: "Met in 3rd grade and bonded over a shared love of art.",
-    },
-    {
       name: "Kiana",
       role: "Maid of Honor",
       relation: "Best Friend",
-      img: "/images/bridesmaid1.png",
+      img: "/images/bridesmaid.png",
       bio: "Kiana has been Emily's partner in crime since day one.",
+    },
+    {
+      name: "Jessica Smith",
+      role: "Bridesmaid",
+      relation: "Childhood Friend",
+      img: "/images/bridesmaid1.png",
+      bio: "Met in 3rd grade and bonded over a shared love of art.",
     },
     {
       name: "Carla Smurthwaite",
@@ -21,16 +21,16 @@ export default function WeddingParty() {
       img: "/images/bridesmaid2.png",
       bio: "Met by chance, stayed by choice.",
     },
+    {
+      name: "hi",
+      role: "Bridesmaid",
+      relation: "",
+      img: "/images/bridesmaid3.png",
+      bio: "",
+    },
   ];
 
   const groomsmen = [
-    {
-      name: "Wyatt Horton",
-      role: "Groomsman",
-      relation: "Mission Trainee",
-      img: "/images/groomsman.png",
-      bio: "Kevin's favorite hiking buddy and confidant.",
-    },
     {
       name: "Chris Foster",
       role: "Best Man",
@@ -39,11 +39,25 @@ export default function WeddingParty() {
       bio: "Kevin's friend, companion, and role model.",
     },
     {
+      name: "Wyatt Horton",
+      role: "Groomsman",
+      relation: "Mission Trainee",
+      img: "/images/groomsman.png",
+      bio: "Kevin's favorite hiking buddy and confidant.",
+    },
+    {
       name: "Levi Forson",
       role: "Groomsman",
       relation: "College Friend",
       img: "/images/groomsman2.png",
       bio: "Always the life of the party.",
+    },
+    {
+      name: "Lebron James",
+      role: "Groomsman",
+      relation: "Brotha",
+      img: "/images/groomsman3.png",
+      bio: "",
     },
   ];
 
@@ -58,14 +72,16 @@ export default function WeddingParty() {
           <h2 className="font-serif text-4xl text-accent text-center mb-12">
             The Bridesmaids
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {bridesmaids.map((person, i) => {
               const isHonoree = person.role === "Maid of Honor";
               return (
                 <div
                   key={i}
                   className={`relative bg-card border p-6 text-center shadow-sm ${
-                    isHonoree ? "shadow-md" : "border-border side-cell"
+                    isHonoree
+                      ? "shadow-md border border-accent"
+                      : "border-border lg:my-[12%]"
                   }`}
                 >
                   <img
@@ -95,14 +111,16 @@ export default function WeddingParty() {
           <h2 className="font-serif text-4xl text-accent text-center mb-12">
             The Groomsmen
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {groomsmen.map((person, i) => {
               const isHonoree = person.role === "Best Man";
               return (
                 <div
                   key={i}
-                  className={`relative bg-card border p-6 text-center shadow-sm ${
-                    isHonoree ? "shadow-md" : "border-border side-cell"
+                  className={`relative bg-card p-6 text-center shadow-sm ${
+                    isHonoree
+                      ? "shadow-md border border-accent"
+                      : "border-border lg:my-[12%]"
                   }`}
                 >
                   <img

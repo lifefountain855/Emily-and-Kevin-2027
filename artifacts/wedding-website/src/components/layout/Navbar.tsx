@@ -58,9 +58,9 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className="font-serif text-2xl tracking-wider text-primary hover:opacity-80 transition-opacity"
+            className="font-serif text-2xl tracking-wider text-primary hover:opacity-80 transition-opacity lg:text-2xl lg:flex lg:flex-row lg:space-x-2 md:text-xl md:flex md:flex-col md:-space-y-3 md:mr-5"
           >
-            E <span className="text-accent">&</span> K
+            <span>E</span> <span className="text-accent">&</span> <span>K</span>
           </Link>
 
           {/* Desktop Nav */}
