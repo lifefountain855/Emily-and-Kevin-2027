@@ -17,15 +17,14 @@ export default function OurStory() {
           />
           <h2 className="font-serif text-3xl text-accent mb-6">How We Met</h2>
           <p className="text-foreground/80 leading-relaxed mb-6 font-light text-lg">
-            It all started at a small coffee shop in downtown Salt Lake City.
-            Kevin was struggling to find a table, and Emily graciously offered
-            the empty chair across from her. What started as a polite gesture
-            turned into a three-hour conversation about our shared love for
-            hiking, terrible sci-fi movies, and our dreams for the future.
+            It all started when Kevin returned from his mission and found Emily
+            on social media (no, not Mutual). When Kevin got to Rexburg, Emily
+            made the first move and invited him over for banana bread and Mario
+            Kart.
           </p>
           <p className="text-foreground/80 leading-relaxed font-light text-lg">
-            By the time the cafe closed, we both knew this was the beginning of
-            something incredibly special.
+            They hit it off well, went on their first date that week and
+            have been stuck at the hip ever since. Their shared love for games, her cat Finny, and each other will keep them together -- forever.
           </p>
         </div>
 
@@ -36,9 +35,10 @@ export default function OurStory() {
           <p className="text-foreground/80 leading-relaxed mb-6 font-light text-lg">
             After many adventures and hard conversations about goals and
             marriage, they went looking at rings. Eventually, they found the
-            one. A beautiful, shining brilliant cut diamond set in a gold band.
-            She knew the day was coming, He took her to a lovely park in a cove of trees, and asked her the question, getting down on one knee. It was the easiest
-            "yes" of her life.
+            one. A beautiful, brilliant-cut diamond set in a gold band.
+            She knew the day was coming, He took her to a lovely park in a cove
+            of trees, and asked her the question, getting down on one knee. It
+            was the easiest "yes" of her life.
           </p>
           <img
             src="/images/ring.png"

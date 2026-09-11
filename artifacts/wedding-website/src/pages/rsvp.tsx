@@ -133,11 +133,10 @@ export default function Rsvp() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitError(null);
-    USER.rsvp = true;
-    setSubmitted(true);
 
-    // Validate required fields based on state
-    const newErrors: FormErrors = {};
+    const newErrors: FormErrors & { attending?: string } = {};
+
+    // 1. Validate Text Inputs
     const fullNameErr = validateField("fullName", formData.fullName);
     const emailErr = validateField("email", formData.email);
     const phoneErr = validateField("phone", formData.phone);
@@ -146,20 +145,25 @@ export default function Rsvp() {
     if (emailErr) newErrors.email = emailErr;
     if (phoneErr) newErrors.phone = phoneErr;
 
+    // 2. Conditional Guest Validation
     if (formData.attending === "plus_one") {
       const guestErr = validateField("guestName", formData.guestName);
       if (guestErr) newErrors.guestName = guestErr;
     }
 
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      return;
+    // 3. Attendance Selection Check
+    if (!formData.attending) {
+      newErrors.attending = "Please select your attendance status.";
     }
 
-    if (!formData.attending) {
-      alert("Please select your attendance status.");
-      return;
+    // 4. Halt Submission If Errors Exist
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return; // Stops submission
     }
+
+    // Clear errors if all pass
+    setErrors({});
 
     setIsSubmitting(true);
 
@@ -168,11 +172,14 @@ export default function Rsvp() {
       await fetch(GOOGLE_SHEET_WEB_APP_URL, {
         method: "POST",
         headers: {
-          "Content-Type": "text/plain;charset=utf-8", // Prevents CORS preflight issues with Apps Script
+          "Content-Type": "text/plain;charset=utf-8",
         },
         body: JSON.stringify(formData),
       });
 
+      // Mark as submitted only after successful request
+      USER.rsvp = true;
+      setSubmitted(true);
       setIsSubmitted(true);
     } catch (err) {
       console.error("RSVP Submission Error:", err);

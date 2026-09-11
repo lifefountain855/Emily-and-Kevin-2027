@@ -51,14 +51,14 @@ export class UserProfile {
   }
 
   save(): void {
-    console.log("save called");
+    // console.log("save called");
     localStorage.setItem("user", JSON.stringify(this));
   }
 
   check(): boolean {
     const savedString = localStorage.getItem("user");
     const userObj = savedString ? JSON.parse(savedString) : null;
-    console.log(userObj?.id);
+    // console.log(userObj?.id);
     return userObj !== null;
   }
 
@@ -66,7 +66,7 @@ export class UserProfile {
     var user = new UserProfile();
     if (user.check()) {
       user = user.load();
-      console.log(user);
+      // console.log(user);
     } else {
       user.save();
     }

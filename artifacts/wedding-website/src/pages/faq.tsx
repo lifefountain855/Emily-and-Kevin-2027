@@ -8,7 +8,7 @@ export default function Faq() {
     },
     {
       question: "What is the dress code?",
-      answer: "We request formalattire. Keep in mind that Washington can be chilly in January, and it may snow or rain so bring warm layers."
+      answer: "We request formal attire. Keep in mind that Washington can be chilly in January, and it may snow or rain so bring warm layers."
     },
     {
       question: "Where should I park?",
@@ -16,7 +16,7 @@ export default function Faq() {
     },
     {
       question: "Can I bring a plus one?",
-      answer: "Due to venue capacity, we are only able to accommodate guests whose names are explicitly stated on the invitation envelope. (Unless otherwise instructed.)"
+      answer: "Due to venue capacity, we are only able to accommodate guests whose names are stated on the invitation envelope. (Unless otherwise instructed.)"
     },
     {
       question: "What time should I arrive?",

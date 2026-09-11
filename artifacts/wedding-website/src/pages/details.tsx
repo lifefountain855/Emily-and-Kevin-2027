@@ -16,7 +16,7 @@ export default function Details() {
     {
       time: "2:00 PM",
       title: "Sealing Ceremony",
-      desc: "Private ceremony for invited people.",
+      desc: "Private ceremony for invited people only.",
     },
     {
       time: "5:30 PM",
@@ -36,7 +36,7 @@ export default function Details() {
     {
       time: "8:30 PM",
       title: "Send-Off",
-      desc: "Rice? Sparklers? Bring it!",
+      desc: "Rice? Sparklers? Bring it on!",
     },
   ];
   const withoutSealing = [...events];
