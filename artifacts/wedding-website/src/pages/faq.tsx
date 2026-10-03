@@ -12,11 +12,11 @@ export default function Faq() {
     },
     {
       question: "Where should I park?",
-      answer: "There is free parking is at both venues."
+      answer: "There is free parking is available at both venues."
     },
     {
       question: "Can I bring a plus one?",
-      answer: "Due to venue capacity, we are only able to accommodate guests whose names are stated on the invitation envelope. (Unless otherwise instructed.)"
+      answer: "Due to venue capacity, we are only able to accommodate guests whose names are stated on the invitation envelope. You can always ask, but we cannot guarantee anything."
     },
     {
       question: "What time should I arrive?",

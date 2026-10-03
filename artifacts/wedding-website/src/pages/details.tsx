@@ -94,7 +94,7 @@ export default function Details() {
                 Reception
               </h2>
               <p className="text-muted-foreground uppercase tracking-widest text-sm mb-6">
-                6:30 PM - 10:00 PM
+                6:30 PM - 8:30 PM
               </p>
               <div className="space-y-2 text-foreground/80">
                 <p className="font-medium">Redmond Ridge Events Center</p>
