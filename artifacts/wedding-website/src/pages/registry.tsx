@@ -10,9 +10,10 @@ export default function Registry() {
         <div className="flex flex-col items-center justify-center gap-2 bg-primary/20 border border-primary/20 p-12 max-w-2xl mx-auto">
           <h2 className="font-serif font-bold text-2xl text-primary">Zola</h2>
           <p className="text-lg text-foreground/80 font-light">
-            Your presence at our wedding is the the greatest gift we could ask
-            for. If you would like to honor us with a gift, we have registered
-            with Zola, which has its own list and also links to external sites like Amazon.
+            Your presence at our wedding is the greatest gift we could ask for.
+            If you would like to honor us with a gift, we have registered with
+            Zola, which has its own list and also links to external sites like
+            Amazon.
           </p>
         </div>
         <div className="flex flex-col items-center justify-center gap-2 bg-secondary/20 border border-secondary/20 p-12 max-w-2xl mx-auto my-5">
